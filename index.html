@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>随千礼 | Suiqianli.com</title>
+</head>
+<style>
+  header {
+    background: #ffffff;
+    height: 3rem;
+    margin: 0 auto;
+    font-size: 1.75rem;
+    font-weight: 900;
+    border-bottom: #eee solid 1px;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: calc(100vh - 8rem);
+  }
+  .content {
+    display: flex;
+    flex: 1 1 0%;
+  }
+  .container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10rem;
+  }
+  @media (min-width: 1400px) {
+    header,
+    .container {
+        max-width: 1400px;
+    }
+  }
+  @media (min-width: 768px) {
+    header,
+    .container {
+        width: 83.333333%;
+    }
+  }
+  .brand {
+    display: flex; 
+    position: relative; 
+    margin-bottom: 1.5rem; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: #ffffff; 
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='16' height='16' fill='none'%3e%3ccircle fill='rgb(0 0 0 / 0.2)' id='pattern-circle' cx='10' cy='10' r='1.6257413380501518'%3e%3c/circle%3e%3c/svg%3e")
+  }
+  .brand img {
+    max-height: 8rem;
+    padding: 3rem 0;
+  }
+  .brand__gradient {
+    display: flex; 
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: #ffffff; 
+    pointer-events: none; 
+    mask-image: radial-gradient(ellipse at center,transparent 20%,black)
+  }
+  footer {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+    height: 3rem;
+  }
+  .footer a {
+    color: #555;
+    text-decoration: none;
+  }
+</style>
+<body>
+    <header class="header">
+      随千礼
+    </header>
+
+    <main class="content">
+      <div class="container">
+        <section class="brand">
+          <div class="brand__gradient"></div>
+          <img src="suiqianli.png" alt>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2023 - <span id="year">2024</span> Suiqianli.com. <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2023006363号-5</a></p>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+      });
+    </script>
+</body>
+</html>
